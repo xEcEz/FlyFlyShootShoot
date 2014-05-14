@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class SpaceGUI : MonoBehaviour {
-	
+
+	public GameObject pauseText;
+
 	void OnGUI () {
 		// Make a background box
 		GUI.Box(new Rect(10,10,100,20), "Score : " + LeapController.Score);
@@ -11,5 +13,6 @@ public class SpaceGUI : MonoBehaviour {
 		//if(GUI.Button(new Rect(20,70,80,20), "Level 2")) {
 		//	Application.LoadLevel(2);
 		//}
+		pauseText.SetActive(StaticMethods.Pause);
 	}
 }

@@ -9,12 +9,15 @@ public class MissileController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Destroy (this.gameObject, 60);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (StaticMethods.Pause) {
+			Destroy (this.gameObject);
+			explose ();
+		}
 	}
 	
 	void OnCollisionEnter(Collision collision) {
@@ -22,6 +25,8 @@ public class MissileController : MonoBehaviour {
 			Destroy(collision.gameObject);
 			Destroy (this.gameObject);
 			LeapController.Score += 100;
+
+			explose ();
 		}
 		if (collision.gameObject.tag.Contains("Bouncer")) {
 			Destroy(this.gameObject, 20);
@@ -31,6 +36,14 @@ public class MissileController : MonoBehaviour {
 			Destroy(this.gameObject);
 			Destroy(collision.gameObject);
 			LeapController.Score += 10;
+
+			explose ();
 		}
+	}
+
+	void explose() {
+		GameObject explosionClone = Instantiate(explosion,this.transform.position, this.transform.rotation) as GameObject;
+		explosionClone.SetActive(true);
+		Destroy (explosionClone, 4);
 	}
 }
