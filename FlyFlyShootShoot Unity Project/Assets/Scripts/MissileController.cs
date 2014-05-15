@@ -5,7 +5,8 @@ public class MissileController : MonoBehaviour {
 	
 	public GameObject explosion;
 	public int bounceScale;
-	
+
+	public int gravitationFieldDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,17 @@ public class MissileController : MonoBehaviour {
 		if (StaticMethods.Pause) {
 			Destroy (this.gameObject);
 			explose ();
+		} else {
+			GameObject[] planets = GameObject.FindGameObjectsWithTag("Planet");
+			for (int i = 0; i < planets.Length; i++) {
+				if (Vector3.Distance(this.transform.position, planets[i].transform.position) < gravitationFieldDistance) {
+					Vector3 gravityForce = -(planets[i].transform.position - this.transform.position);
+					gravityForce.Normalize();
+					gravityForce = gravityForce * 1;
+					print (gravityForce);
+					this.rigidbody.AddRelativeForce(gravityForce, ForceMode.VelocityChange);
+				}
+			}
 		}
 	}
 	

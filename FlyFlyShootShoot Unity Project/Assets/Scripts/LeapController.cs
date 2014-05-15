@@ -69,17 +69,24 @@ public class LeapController : MonoBehaviour {
 	void Update () {
 		lastShoot ++;
 
-		Frame frame = leapController.Frame ();
-		if (frame.Hands.Count < 2) {
-			StaticMethods.SetOnPause ();
-		} else {
-			StaticMethods.SetOnPlay ();
-		}
-
 		if (StaticMethods.Pause) {
-			// Paused
+			if (leapEnabled) {
+				Frame frame = leapController.Frame ();
+				if (frame.Hands.Count < 2) {
+					StaticMethods.SetOnPause ();
+				} else {
+					StaticMethods.SetOnPlay ();
+				}
+			}
 		} else {
 			if (leapEnabled) {
+				Frame frame = leapController.Frame ();
+				if (frame.Hands.Count < 2) {
+					StaticMethods.SetOnPause ();
+				} else {
+					StaticMethods.SetOnPlay ();
+				}
+
 				pitch = 0;
 				raw = 0;
 
