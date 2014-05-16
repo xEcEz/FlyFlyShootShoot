@@ -17,7 +17,8 @@ public class Translation : MonoBehaviour {
 	void Update () 
     {
 		// Translate
-		Vector3 newPos = new Vector3(faceAPI.yaw * multiplyerTranslation, 0, 0);
+		//Vector3 newPos = new Vector3(faceAPI.yaw * multiplyerTranslation, 0, 0);
+		Vector3 newPos = new Vector3(faceAPI.xPos * multiplyerTranslation, faceAPI.yPos * multiplyerTranslation, (faceAPI.zPos * -multiplyerTranslation));
 		this.transform.localPosition = newPos;
 
 		// Rotate
