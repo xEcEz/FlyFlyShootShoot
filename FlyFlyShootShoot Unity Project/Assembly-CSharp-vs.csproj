@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\LeapController.cs" />
      <Compile Include="Assets\Scripts\MissileController.cs" />
      <Compile Include="Assets\Scripts\Pitch.cs" />
+     <Compile Include="Assets\Scripts\PlanetRotation.cs" />
      <Compile Include="Assets\Scripts\Roll.cs" />
      <Compile Include="Assets\Scripts\SeekSteer.cs" />
      <Compile Include="Assets\Scripts\ShipCollider.cs" />
@@ -57,18 +58,13 @@
      <Compile Include="Assets\Scripts\StaticMethods.cs" />
      <Compile Include="Assets\Scripts\TargetLine.cs" />
      <Compile Include="Assets\Scripts\Translation.cs" />
-     <Compile Include="Assets\Scripts\WayPoint.cs" />
      <Compile Include="Assets\Scripts\Yaw.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Single_rock\readme.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\SkyBoxes\space2\Note.txt" />
      <None Include="Assets\3D Models\sfyq6h6cw2-skyrangerdominator\readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
- <Reference Include="Destruction">
- <HintPath>Assets\Fracture - Box Destruction - Standard\Scripts\Destruction.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>Assets\Plugins\LeapCSharp.NET3.5.dll</HintPath>

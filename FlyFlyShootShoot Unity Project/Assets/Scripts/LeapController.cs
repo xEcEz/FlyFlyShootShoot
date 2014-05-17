@@ -41,6 +41,8 @@ public class LeapController : MonoBehaviour {
 	
 	float pitch;
 	float raw;
+
+	public int ratioSpeedMissile;
 	
 	// Use this for initialization
 	void Start () {
@@ -131,7 +133,6 @@ public class LeapController : MonoBehaviour {
 				}
 				controller.Move (transform.TransformDirection (Vector3.forward * speedNoLeap));
 				if (Input.GetKey (KeyCode.Space)) {
-					print ("SPACE");
 					shoot ();
 				}
 			}
@@ -170,7 +171,12 @@ public class LeapController : MonoBehaviour {
 		if (lastShoot > shootTimeDelta){
 			GameObject clone = Instantiate(weapon, weapon.rigidbody.position, weapon.rigidbody.rotation) as GameObject;
 			clone.SetActive(true);
+			print ("VELOCITY : " + controller.velocity); 
 			clone.rigidbody.AddForce(transform.TransformDirection(Vector3.forward * weaponForce));
+			if(controller.velocity.z > 0) {
+				clone.rigidbody.AddForce(transform.TransformDirection((Vector3.forward * controller.velocity.magnitude) / ratioSpeedMissile));
+			}
+
 			lastShoot = 0;
 		}
 	}	

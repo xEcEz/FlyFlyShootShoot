@@ -53,9 +53,6 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\SkyBoxes\space2\Note.txt" />
      <None Include="Assets\3D Models\sfyq6h6cw2-skyrangerdominator\readme.txt" />
- <Reference Include="Destruction">
- <HintPath>Assets\Fracture - Box Destruction - Standard\Scripts\Destruction.dll</HintPath>
- </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>Assets\Plugins\LeapCSharp.NET3.5.dll</HintPath>
  </Reference>

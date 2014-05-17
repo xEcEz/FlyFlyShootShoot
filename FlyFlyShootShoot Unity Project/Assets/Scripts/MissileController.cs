@@ -15,18 +15,17 @@ public class MissileController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//print ("MISSILE : " + this.gameObject.transform.position);
 		if (StaticMethods.Pause) {
 			Destroy (this.gameObject);
 			explose ();
 		} else {
 			GameObject[] planets = GameObject.FindGameObjectsWithTag("Planet");
 			for (int i = 0; i < planets.Length; i++) {
+				//print ("PLANET FOUND : " + planets[i].transform.position);
 				if (Vector3.Distance(this.transform.position, planets[i].transform.position) < gravitationFieldDistance) {
-					Vector3 gravityForce = -(planets[i].transform.position - this.transform.position);
-					gravityForce.Normalize();
-					gravityForce = gravityForce * 1;
-					print (gravityForce);
-					this.rigidbody.AddRelativeForce(gravityForce, ForceMode.VelocityChange);
+					Vector3 gravityForce = planets[i].gameObject.rigidbody.mass * (planets[i].transform.position - this.transform.position).normalized;
+					this.rigidbody.AddForce(gravityForce);
 				}
 			}
 		}
@@ -49,6 +48,11 @@ public class MissileController : MonoBehaviour {
 			Destroy(collision.gameObject);
 			LeapController.Score += 10;
 
+			explose ();
+		}
+		if (collision.gameObject.tag.Contains("Planet")) {
+			Destroy (this.gameObject);
+			
 			explose ();
 		}
 	}

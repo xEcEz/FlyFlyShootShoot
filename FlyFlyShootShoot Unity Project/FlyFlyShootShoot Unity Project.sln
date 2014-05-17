@@ -7,8 +7,6 @@ Project("{23C85FAD-12D9-C11F-4376-7D04A16D1E39}") = "FlyFlyShootShoot Unity Proj
 EndProject
 Project("{23C85FAD-12D9-C11F-4376-7D04A16D1E39}") = "FlyFlyShootShoot Unity Project", "Assembly-UnityScript-firstpass.unityproj", "{10953EAD-212D-B110-A320-9D142843209E}"
 EndProject
-Project("{23C85FAD-12D9-C11F-4376-7D04A16D1E39}") = "FlyFlyShootShoot Unity Project", "Assembly-UnityScript.unityproj", "{2B015518-9D43-A493-5D57-49E44664A696}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,15 +25,11 @@ Global
 		{10953EAD-212D-B110-A320-9D142843209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10953EAD-212D-B110-A320-9D142843209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10953EAD-212D-B110-A320-9D142843209E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B015518-9D43-A493-5D57-49E44664A696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B015518-9D43-A493-5D57-49E44664A696}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B015518-9D43-A493-5D57-49E44664A696}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B015518-9D43-A493-5D57-49E44664A696}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

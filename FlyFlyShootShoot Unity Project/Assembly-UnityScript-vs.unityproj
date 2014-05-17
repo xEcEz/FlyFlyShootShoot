@@ -56,9 +56,6 @@
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
- <Reference Include="Destruction">
- <HintPath>Assets\Fracture - Box Destruction - Standard\Scripts\Destruction.dll</HintPath>
- </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>Assets\Plugins\LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
